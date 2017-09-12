@@ -17,6 +17,10 @@ if($jsonData != null) {
 		
 		echo json_encode($json_result);
 		
+	} else if ($jsonData->actionType == 'updateGameData') {	
+		
+		echo 'A';
+		
 	}
 	
 }

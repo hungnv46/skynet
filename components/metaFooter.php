@@ -62,6 +62,9 @@
 	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
 	<script src="assets/js/jquery.validate.min.js"></script>
 	
+	<!-- Custom Behaviors -->
+	<script src="assets/js/layout.js"></script>
+	
 </body>
 
 	

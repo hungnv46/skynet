@@ -1,5 +1,5 @@
 <?php
-  require_once('config.php');
+  require_once('connection.php');
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +20,8 @@
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 	
 	<!--  Light Bootstrap Table core CSS    -->
-    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
-	
+    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>	
+		
 </head>
 
 <body>

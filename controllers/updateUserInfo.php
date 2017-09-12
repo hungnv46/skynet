@@ -13,7 +13,7 @@ function updateUserInfo($objData) {
 		
 		global $conn; 
 		
-		$sql = 'SELECT email FROM user WHERE  uid='. $objData->facebookId;
+		$sql = "SELECT email FROM user WHERE  uid=". $objData->facebookId;
 		
 		// Prepare statement
 		$stmt = $conn->prepare($sql);
@@ -21,7 +21,7 @@ function updateUserInfo($objData) {
 		// execute the query
 		$stmt->execute();
 		
-		$result = $stmt->rowCount();
+		$result = $stmt->rowCount();	
 		
 		if($result > 0) {
 			

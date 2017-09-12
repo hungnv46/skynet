@@ -25,8 +25,8 @@
 								<div class="wizard-navigation">
 									<ul>
 			                            <li><a href="#details" data-toggle="tab">Choose Game</a></li>	
-			                            <li><a href="#captain" data-toggle="tab">Edit Rewards</a></li>
-			                            <li><a href="#description" data-toggle="tab">Launch</a></li>
+			                            <li><a href="#reward" data-toggle="tab">Edit Rewards</a></li>
+			                            <li><a href="#launch" data-toggle="tab">Launch</a></li>
 			                        </ul>
 								</div>
 
@@ -96,13 +96,13 @@
 		                                	</div>
 		                            	</div>
 		                            </div>
-		                            <div class="tab-pane" id="captain" style="display:block!important">
+		                            <div class="tab-pane" id="reward">
 		                                <h4 class="info-text">Setup your game rewards</h4>
 		                                <div class="row">											
-		                                    <div class="col-sm-3">
+		                                    <div class="col-sm-3 list-prizes">
 												<div id="1st" class="btn btn-warning btn-fill">1st prize<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
-												<div id="2st" class="btn btn-success btn-fill">2nd prize<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
-												<div id="3st" class="btn btn-primary btn-fill">3rd prize<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
+												<div id="2nd" class="btn btn-success btn-inactive btn-fill">2nd prize<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
+												<div id="3rd" class="btn btn-primary btn-inactive btn-fill">3rd prize<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
 		                                    </div>
 											
 											<div class="col-sm-9">
@@ -131,7 +131,7 @@
 														</tbody>														
 													</table>
 													
-													<div class="btn btn-fill btn-block add-more"><i class="material-icons">add</i> Add more<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>		
+													<div class="btn btn-fill btn-warning btn-block add-more"><i class="material-icons">add</i> Add more<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>		
 													
 												</div>
 												
@@ -157,7 +157,7 @@
 														</tbody>														
 													</table>
 													
-													<div class="btn btn-fill btn-block add-more"><i class="material-icons">add</i> Add more<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>		
+													<div class="btn btn-fill btn-warning btn-block add-more"><i class="material-icons">add</i> Add more<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>		
 												</div>
 												
 												<div class="table-responsive hide" id="3rd">            
@@ -177,12 +177,12 @@
 																<td class="reward-name" ><input type="text" style="width:80%" /></td>
 																<td class="reward-description" ><input type="text" style="width:80%" /></td>
 																<td class="reward-image"><i class="material-icons">add_a_photo</i></td>
-																<td class="reward-qty" ><input type="number" style="width:40%" /></td>
+																<td class="reward-qty" ><input type="number" value="1" style="width:40%" /></td>
 															</tr>
 														</tbody>														
 													</table>
 													
-													<div class="btn btn-fill btn-block add-more"><i class="material-icons">add</i> Add more<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
+													<div class="btn btn-fill btn-warning btn-block add-more"><i class="material-icons">add</i> Add more<div class="ripple-container"><div class="ripple ripple-on ripple-out"></div></div></div>
 
 												</div>
 												
@@ -190,22 +190,67 @@
 											</div>
 		                                </div>								
 		                            </div>
-		                            <div class="tab-pane" id="description">
+		                            <div class="tab-pane" id="launch">
 		                                <div class="row">
-		                                    <h4 class="info-text"> Drop us a small description.</h4>
-		                                    <div class="col-sm-6 col-sm-offset-1">
-	                                    		<div class="form-group">
-		                                            <label>Room description</label>
-		                                            <textarea class="form-control" placeholder="" rows="6"></textarea>
-		                                        </div>
-		                                    </div>
-		                                    <div class="col-sm-4">
-		                                    	<div class="form-group">
-		                                            <label class="control-label">Example</label>
-		                                            <p class="description">"The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it."</p>
-		                                        </div>
-		                                    </div>
-		                                </div>
+		                                    <h4 class="info-text">Add users and get link to play the game.</h4>
+											
+											<div class="col-sm-5">
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="material-icons">person_add</i>
+													</span>
+													<div class="form-group label-floating is-empty">
+														<label class="control-label">Enter User's Phone</label>
+														<input name="user-phone" type="tel" class="form-control user-phone">																				
+													</div>
+													
+												</div>																
+											</div>
+											<div class="clearfix"></div>
+											<div class="col-sm-2">											
+												<div class="btn btn-fill btn-warning pull-right add-user" style="position:absolute;top: 1em;"><i class="material-icons">add</i> Add</div>
+											</div>
+											
+										</div>
+										
+										<div class="row">												
+											
+											<div class="col-sm-7">	
+												<div class="table-responsive" id="list-users">          
+													<table class="table">
+														<thead>
+															<tr>
+																<th>Func</th>
+																<th>User's Phone</th>														
+																<th>User's FullName</th>															
+															</tr>
+														</thead>
+														<tbody>
+															<!--<tr>															
+																<td><i class="material-icons remove">cancel</i></td>
+																<td class="user-phone" >
+																	<input type="text" style="width:80%" />
+																</td>
+																<td class="user-fullname" >
+																	<input type="text" style="width:80%" />
+																</td>														
+															</tr>-->
+														</tbody>														
+													</table>													
+													
+												</div>
+											</div>
+											
+											<div class="col-sm-5 pull-right">											
+												<img src="assets/images/lottery_screen.png" class="img-responsive center-block" alt="Lottery Game" width="250" height="auto" />
+												<div style="word-wrap: break-word; white-space: normal; display: inline-block; margin: 1em 0; width: 100%;">
+													<a href="https://toolkit.tforce.xyz/hosting/beer" >https://toolkit.tforce.xyz/hosting/beer/index.html</a>
+												</div>
+											</div>		
+										
+										</div>
+										
+											
 		                            </div>
 		                        </div>
 	                        	<div class="wizard-footer">
@@ -218,12 +263,12 @@
 
 										<div class="footer-checkbox">
 											<div class="col-sm-12">
-											  <div class="checkbox">
+											  <!--<div class="checkbox">
 												  <label>
 													  <input type="checkbox" name="optionsCheckboxes">
 												  </label>
 												  Subscribe to our newsletter
-											  </div>
+											  </div>-->
 										  </div>
 										</div>
 	                                </div>

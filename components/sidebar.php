@@ -5,12 +5,12 @@
 	<div class="sidebar-wrapper">
 		<div class="logo">
 			<a href="http://www.creative-tim.com" class="simple-text">
-				Creative Tim
+				SkyNet
 			</a>
 		</div>
 
-		<ul class="nav">
-			<li class="active">
+		<ul class="nav" active-menu="<?php echo basename($_SERVER['PHP_SELF'], ".php") ?>">
+			<li>
 				<a href="home.php">
 					<i class="pe-7s-graph"></i>
 					<p>Dashboard</p>

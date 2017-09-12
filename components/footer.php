@@ -4,28 +4,28 @@
 			<ul>
 				<li>
 					<a href="#">
-						Home
+						Lorum Ip Sum
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						Company
+						Lorum Ip Sum
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						Portfolio
+						Lorum Ip Sum
 					</a>
 				</li>
 				<li>
 					<a href="#">
-					   Blog
+					   Lorum Ip Sum
 					</a>
 				</li>
 			</ul>
 		</nav>
 		<p class="copyright pull-right">
-			&copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+			<!--&copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web-->
 		</p>
 	</div>
 </footer>

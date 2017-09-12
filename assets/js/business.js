@@ -82,3 +82,22 @@ siteBusiness.loginWithFB = function() {
 	}, {scope: 'email'});
 	
 }
+
+
+siteBusiness.updateGameData = function (jsonData, success, error) {
+	
+	var data = webAPI.xmlHttpRequest.data({		
+		'actionType' : 'updateGameData'
+	});
+	
+	webAPI.xmlHttpRequest.request(siteConfig.apiPath.updateDB, data, 'POST', function (response) {
+						
+		success(response);		
+
+	}, function (xhr, status) {
+
+		 error(xhr, xhr.status);
+		
+	});
+	
+}

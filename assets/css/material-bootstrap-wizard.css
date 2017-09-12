@@ -1770,3 +1770,25 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     min-width: 140px;
   }
 }
+
+/************ Custom Styles ************/
+
+.btn-inactive {
+  border-color: #999999;
+  color: #999999;
+}
+.btn-inactive:hover, .btn-inactive:focus, .btn-inactive:active, .btn-inactive.active, .open > .btn-inactive.dropdown-toggle {
+  background-color: transparent;
+  color: #42d0ed;
+  border-color: #42d0ed;
+}
+.btn-inactive.disabled, .btn-inactive.disabled:hover, .btn-inactive.disabled:focus, .btn-inactive.disabled.focus, .btn-inactive.disabled:active, .btn-inactive.disabled.active, .btn-inactive:disabled, .btn-inactive:disabled:hover, .btn-inactive:disabled:focus, .btn-inactive:disabled.focus, .btn-inactive:disabled:active, .btn-inactive:disabled.active, .btn-inactive[disabled], .btn-inactive[disabled]:hover, .btn-inactive[disabled]:focus, .btn-inactive[disabled].focus, .btn-inactive[disabled]:active, .btn-inactive[disabled].active, fieldset[disabled] .btn-inactive, fieldset[disabled] .btn-inactive:hover, fieldset[disabled] .btn-inactive:focus, fieldset[disabled] .btn-inactive.focus, fieldset[disabled] .btn-inactive:active, fieldset[disabled] .btn-inactive.active {
+  background-color: transparent;
+  border-color: #999999;
+}
+.btn-inactive.btn-fill {
+  color: #FFFFFF;
+  background-color: #999999;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
